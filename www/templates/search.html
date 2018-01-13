@@ -1,0 +1,54 @@
+﻿<ion-view>
+<link href="css/search.css" rel="stylesheet" type="text/css" />
+<ion-nav-title>
+  <form ng-submit="startSearch()">
+	  <label class="item item-input">
+		<input ng-model="data.keyword" type="text" placeholder="{{'keyword' | translate}}">
+	  </label>
+  </form>
+</ion-nav-title>
+<ion-nav-buttons side="right">
+	<button ng-disabled="!data.keyword" ng-click="startSearch()" class="bar-sidemenu bar-button ion-ios-search-strong"></button>
+</ion-nav-buttons>
+<ion-content class="search-main">
+	<div class="padding text-center" ng-hide="data.keyword || 1 < search.length">{{'emptyList' | translate}}</div>
+	<div class="padding text-center" ng-show="isSearch && over && search.length <1">{{'noResult' | translate}}</div>
+	<div ng-show="search">
+		<div ng-repeat="item in search" class="row posts">
+			<div ng-if="item.format=='standard'" class="col no-padding" ui-sref="app.news({id:item.id})">
+				<div class="row news">
+					<div class="col col-33" ng-if="item.mobiconnector_feature_image.mobiconnector_medium">
+						<img ng-src="{{item.mobiconnector_feature_image.mobiconnector_medium}}" class="img float-left">
+					</div>
+					<div class="col">
+						<b ng-bind-html="item.title.rendered"></b>
+						<div ng-if="!item.mobiconnector_feature_image.mobiconnector_medium" class="item item-text-wrap no-padding">
+							<span ng-bind-html="item.content.rendered | firstSentence"></span>...
+						</div>
+						<div class="row row-no-padding">
+							<span class="col col-offset-10 info">{{item.time | timeAgo}}</span>
+							<div class="col col-offset-10">
+								<span class="info"><i class="icon-chat"></i> {{item.mobiconnector_total_comments.approved}} 
+								<span ng-if="item.mobiconnector_total_comments.approved <2">{{'comment' || translate}}</span>
+								<span ng-if="item.mobiconnector_total_comments.approved >1">{{'comments' || translate}}</span>
+								</span>
+							</div>
+						</div>		
+					</div>
+				</div>
+			</div>
+			<div ng-if="item.format=='video'" class="col no-padding news-video relative" ui-sref="app.news({id:item.id})">
+				<img ng-src="{{item.mobiconnector_feature_image.mobiconnector_large || 'img/no_images.png'}}" class="img float-left" />
+				<span class="absolute title-news"><b><span ng-bind-html="item.title.rendered"></span></b></span>
+				<i class="absolute icon icon-play"></i>
+			</div>
+			<div ng-if="item.format=='image'" class="col no-padding news-video relative no-padding" ui-sref="app.newsPhoto({id:item.id})">
+				<img ng-src="{{item.mobiconnector_feature_image.mobiconnector_large || 'img/no_images.png'}}" class="img float-left" />
+				<span class="absolute title-news"><b><span ng-bind-html="item.title.rendered"></span></b></span>
+				<i class="absolute icon icon-photo"></i>
+			</div>
+		</div>
+	</div>
+<ion-infinite-scroll ng-if="isSearch && !over" on-infinite="load()" distance="1%"></ion-infinite-scroll>
+</ion-content>
+</ion-view>

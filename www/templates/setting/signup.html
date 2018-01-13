@@ -1,0 +1,41 @@
+<ion-view title="{{'register' | translate}}">
+<link href="css/settings.css" rel="stylesheet" type="text/css" />
+<ion-content class="register">
+	<span class="add" href="">{{'weNeed' | translate}}</a></span>
+	<div class="list">
+		<label class="item item-input item-floating-label">
+			<input class="input-login" type="text" placeholder="{{'username' | translate}}" ng-model="data.username">
+		</label>
+		<label class="item item-input item-floating-label">
+			<input class="input-login" type="email" placeholder="{{'email' | translate}}" ng-model="data.email">
+		</label>
+		<label class="item item-input item-floating-label">
+			<input class="input-login" type="text" placeholder="{{'firstName' | translate}}" ng-model="data.name.first">
+		</label>
+		<label class="item item-input item-floating-label">
+			<input class="input-login" type="text" placeholder="{{'lastName' | translate}}" ng-model="data.name.last">
+		</label>
+		<label class="item item-input item-floating-label">
+			<input class="input-login" type="password" placeholder="{{'password' | translate}}" ng-model="data.password">
+		</label>
+		<label class="item item-input item-floating-label">
+			<input class="input-login" type="password" placeholder="{{'rePassword' | translate}}" ng-model="data.repass">
+		</label>
+	</div>
+	<div class="margin-auto row row-center row-no-padding signup-term">
+	<div class="col text-center">
+		<input type="checkbox" ng-model="data.term" ng-hide="true" id="term" />
+		<label for="term">
+			<div class="status-check float-left relative">
+				<i ng-show="data.term" class="icon absolute ion-android-checkbox"></i>
+			</div> 
+			<span class="add-0">{{'iAgree' | translate}}</span> 
+		</label>
+		<a class="link" ui-sref="app.terms"> {{'termsConditions' | translate}}</a>
+	</div>
+	</div>
+	<div class="col login no-padding" style="padding-right:0px;padding-left:0px;">
+		<button class="button button-block login-email box-shadow upper" ng-click="register()">{{'logIn' | translate}}</button>
+	</div>
+</ion-content>
+</ion-view>	

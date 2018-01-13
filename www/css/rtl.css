@@ -1,0 +1,34 @@
+body[dir="rtl"] .bar-header .title{
+	right:50px!important;
+	left:101px!important
+}
+body[dir="rtl"] .bar-header .buttons-right{
+	left:5px;
+	right:auto!important
+}
+body[dir="rtl"] .item-icon-left{
+	padding-left:16px;
+	padding-right:54px
+}
+body[dir="rtl"] .item-icon-left .icon{
+	right:11px;
+	left:auto
+}
+body[dir="rtl"] .slider .slider-slides{direction:rtl}
+body[dir="rtl"] .item.item-avatar{
+	padding-left:16px;
+	padding-right:80px
+}
+body[dir="rtl"] .item.item-avatar img{
+	right:16px;
+	left:auto
+}
+body[dir="rtl"] .popup-choose .popup-head{text-align:right}
+body[dir="rtl"] .float-left{float:right}
+body[dir="rtl"] .float-right{float:left}
+body[dir="rtl"] .tabs-bookmark .tab-nav .tab-item{float:right}
+body[dir="rtl"] .menu-child{
+	right:125px;
+	left:auto
+}
+body[dir="rtl"] span.info.col-offset-10{margin-left:10%}

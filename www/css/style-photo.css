@@ -1,0 +1,29 @@
+.content-photo{background:#ddd;}
+.photo{background:#fff;border:#ddd 1px solid;}
+.back-button-light{color:#fff;}
+.button-icon.bar-button.icon-bookmarks:focus{color:#ff0000;}
+.bar.bar-footer.title-photo{
+	background:rgba(0,0,0,0.2);
+	color:#fff;
+	display:block;
+	height:auto;
+	max-height:100%;
+	font-size:17px;
+	position:absolute;
+	bottom:0
+}
+.news-photo-img{
+	height:100px;
+	overflow:hidden
+}
+.bookmarked{color:#f00}
+.detail-main{background:#000}
+.detail-main .photo-info{
+	color:#fff;
+	font-size:14px;
+	line-height:1.1;
+	bottom:0;
+	left:0;
+	width:100%;
+	background:rgba(0,0,0,0.2)
+}

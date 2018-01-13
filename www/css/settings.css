@@ -1,0 +1,150 @@
+.add-1{font-family:Roboto;font-size:14px;color:#737578}
+.flexxx{justify-content:center;}
+.item.item-avatar{
+	padding-left:80px
+}
+.item.item-avatar img{
+	max-width:52px;
+	max-height:52px;
+	top:10px
+}
+.item.item-divider{background:#efefef}
+.button-icon.icon-pen{
+	background:#0e9c8e;
+    border:1px solid #fff;
+    border-radius:100%;
+    line-height:28px;
+    min-height:30px;
+    left:45px;
+    bottom:10px
+}
+.popup-container input{width:auto;}
+.popup-head{text-align:left;}
+	.toggle.toggle-assertive{display:flex;align-items:center}
+	.toggle.toggle-assertive input:checked + .track {
+		height:16px;
+		background-color:#ba2c2d;
+		border-color:#ba2c2d;
+	}
+	.toggle.toggle-assertive .track{height:16px;}
+	.toggle.toggle-assertive input:checked + .track .handle{background-color:#ef4235}
+	/********/
+	.toggle.toggle-balanced{display:flex;align-items:center;height:50px;}
+	.toggle.toggle-balanced input:checked + .track {
+		height:16px;
+		background-color:#b2dfdb;
+		border-color:#b2dfdb;
+	}
+	.toggle.toggle-balanced .track{height:16px;}
+	.toggle.toggle-balanced input:checked + .track .handle{
+		top:11px;background-color:#003958;
+	}
+	.toggle.toggle-balanced .handle{
+		top:11px;
+	}
+/*popup*/
+	.popup-container .popup{background-color:rgba(255, 255, 255, 1)}
+	/***********/
+	.right-buttons{margin-right:5px;}
+	.list-noti{color:#666;font-family:Roboto;font-size:16px;}
+	.list-noti-small{color:#999;font-family:Roboto;font-size:10px;}
+	.title-noti{color:#666;font-family:Roboto;font-size:12px;}
+	.background-d{background:#dbdcde;padding:15px;align-items:center; }
+	.list{margin-bottom:0px;}
+	.box-shadow{box-shadow:0px 2px 1px 0px rgba(0,0,0,0.2);}
+/*register*/
+	.register{padding-left:35px;padding-right:35px;padding-top:40px;}
+	.add-0{font-family:Roboto;font-size:10px;color:#737578}
+	.link{font-family:Roboto;font-size:10px;display:inline;}
+	.signup-term{
+		width:240px;
+	}
+	.signup-term .status-check{
+		width:18px;
+		height:18px;
+		border:2px solid #696969;
+		border-radius:3px;
+		margin-top:2px
+	}
+	.signup-term .status-check i{
+		top:-10px;
+		left:-2px;
+		font-size:24px;
+		color:#009688
+	}
+/*setting-success*/
+	.edit{display: block;
+		height: 33px;
+		width: 33px;
+		text-align: center;
+		background: #0e9c8e;
+		color: #fff;
+		font-size: 17px;
+		border: #fff solid 2px;
+		border-radius: 20px;
+		padding-top: 5px;
+		position: absolute;
+		left: 78px;
+		top: 78px;
+		z-index: 5;
+	}
+	.logout{
+		background:#b0282a;color:#fff;font-family:Roboto;font-size:15px;
+		right:16px;
+		bottom:10px
+	}
+	.item.item-thumbnail-left{height:120px;padding-left:123px;}
+	.item-thumbnail-left > img:first-child{max-width:100px;max-height:100px;}
+/*menu*/
+
+
+/*loin*/
+.facebook-login{
+	background-image:url(../img/button-facebook.png);
+	color:#fff;font-family:Helvetica Medium;font-size:15px;
+	border-radius:0px;
+}
+.col-10.ion-social-facebook, .col-10.ion-social-googleplus-outline{font-size:30px;}
+.google-login{
+	background-image:url(../img/button-google.png);
+	color:#fff;font-family:Helvetica Medium;font-size:15px;
+	border-radius:0px;
+}
+label.item.item-input.item-floating-label{padding-left:0px;}
+label.item.item-input.item-floating-label > .input-login{
+	color:#008c7d;padding-left:5px;border-bottom:#8d8d8d solid 1px;
+}
+label.item.item-input.item-floating-label > .input-login:focus{
+	padding-left:5px;border-bottom:#008c7d solid 2px;
+}
+.login{padding-left:24px;padding-right:24px;}
+.signup-now{
+	background:#b9b9b9;color:#fff;font-family:Helvetica Medium;font-size:14px;
+}
+.text{font-family:Helvetica;font-style:Regular;color:#191919;text-align:justify;}
+
+.tabs-bookmark .tab-nav{
+	display:block;
+	background:transparent;
+	border-bottom:2px solid #ad1b1d;
+	background:#ddd
+}
+.tabs-bookmark .pane{background:#ddd}
+.tabs-bookmark .tab-nav .tab-item{
+	padding:0 20px;
+	float:left;
+	opacity:1
+}
+.tabs-bookmark .tab-nav .tab-item.tab-item-active.activated{
+	border-bottom:3px solid #ad1b1d!important
+}
+.tabs-bookmark .tab-nav .tab-item.tab-item-active{
+	border-bottom:3px solid #ad1b1d!important
+}
+.tabs-bookmark .tab-nav .tab-item span{color:#000!important}
+.tabs-bookmark .news{padding-right:25px}
+.tabs-bookmark .news >i{
+	font-size:24px;
+    right:5px;
+	top:10px
+}

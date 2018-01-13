@@ -1,0 +1,47 @@
+<link href="css/menu.css" rel="stylesheet" type="text/css" />
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content drag-content="false">
+    <ion-nav-bar class="header">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="{{menuDirection}}">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="{{menuDirection}}"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="{{menuDirection}}" class="menu menu-{{menuDirection}}">
+    <ion-header-bar class="header row-center">
+		<button class="back-button bar-button ion-android-arrow-back" menu-toggle="{{menuDirection}}"></button>
+		<h1 class="title"><span class="logo">{{'title' | translate}}</span></h1>
+    </ion-header-bar>
+    <ion-content scroll="false">
+		<ion-scroll class="height-100">
+		  <ul class="list menu-list">
+			<a menu-close class="item item-icon-{{menuDirection}}" ui-sref="app.home" ng-class="{'selected':now=='home'}">
+				<i class="icon icon-home"></i> {{'Home' | translate}}
+			</a>
+			<a class="item item-icon-{{menuDirection}}" ng-repeat="item in categoryParent" ng-click="openCategory(item.id)" ng-class="{'selected':now==item.id}">
+				<i class="icon" ng-class="{'ion-earth':!item.mobiconnector_avatar}">
+					<img ng-if="item.mobiconnector_avatar" class="margin-auto" ng-src="{{item.mobiconnector_avatar}}" />
+				</i> <span ng-bind-html="item.name"></span>
+			</a>
+			<a menu-close class="item item-icon-{{menuDirection}}" ui-sref="app.photo" ng-class="{'selected':now=='photo'}">
+				<i class="icon icon-photo"></i> {{'photos' | translate}}
+			</a>
+			<a menu-close class="item item-icon-{{menuDirection}}" ui-sref="app.video" ng-class="{'selected':now=='video'}">
+				<i class="icon icon-video"></i> {{'videos' | translate}}
+			</a>
+		  </ul>
+		 </ion-scroll>
+		 <ul class="list menu-child" ng-show="categoryNowChild.length >0">
+		  <ion-scroll class="height-100">
+			<a class="item" ng-repeat="item in categoryNowChild" ng-click="openCategory(item.id,true)">
+				<span ng-bind-html="item.name"></span>
+			</a>		
+		  </ion-scroll>
+		 </ul>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

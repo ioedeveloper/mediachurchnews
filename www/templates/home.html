@@ -1,0 +1,48 @@
+<ion-view>
+<link href="css/home.css" rel="stylesheet" type="text/css" />
+<ion-nav-buttons side="right">
+	<button ui-sref="app.search" class="bar-sidemenu bar-button ion-ios-search-strong"></button>
+</ion-nav-buttons>
+<ion-nav-buttons side="secondary">
+	<button ui-sref="app.settings" class="bar-sidemenu bar-button icon-settings"></button>
+</ion-nav-buttons>
+<ion-nav-title class="logo">{{'title' | translate}}</ion-nav-title>
+<ion-tabs tabs-top class="tabs-news">
+	<ion-tab title="{{'latest' | translate}}" on-select="changeTab()">
+		<ion-pane ng-controller="LastestCtrl">
+			<ion-content class="home-content">
+				<ion-refresher on-refresh="doRefresh()" spinner="none" pulling-icon="ion-refresh"></ion-refresher>
+				<div ng-include="'templates/on_tabs/latest.html'"></div>
+				<ion-infinite-scroll ng-if="!over" on-infinite="load()" distance="1%"></ion-infinite-scroll>
+			</ion-content>
+		</ion-pane>
+	</ion-tab>
+	<ion-tab title="{{'topnew' | translate}}" on-select="changeTab()">
+		<ion-pane ng-controller="TopnewsCtrl">
+			<ion-content class="home-content">
+			<ion-refresher on-refresh="doRefresh()" spinner="none" pulling-icon="ion-refresh"></ion-refresher>
+				<div ng-include="'templates/on_tabs/top_news.html'"></div>
+			<ion-infinite-scroll ng-if="!over" on-infinite="load()" distance="1%"></ion-infinite-scroll>
+			</ion-content>
+		</ion-pane>
+	</ion-tab>
+	<ion-tab title="{{'video' | translate}}" on-select="changeTab()">
+		<ion-pane ng-controller="VideoCtrl">
+			<ion-content class="home-content">
+			<ion-refresher on-refresh="doRefresh()" spinner="none" pulling-icon="ion-refresh"></ion-refresher>
+				<div ng-include="'templates/on_tabs/video.html'"></div>
+			<ion-infinite-scroll ng-if="!over" on-infinite="load()" distance="1%"></ion-infinite-scroll>
+			</ion-content>
+		</ion-pane>
+	</ion-tab>
+	<ion-tab title="{{'trending' | translate}}" on-select="changeTab()">
+		<ion-pane ng-controller="TrendingCtrl">
+			<ion-content class="home-content">
+			<ion-refresher on-refresh="doRefresh()" spinner="none" pulling-icon="ion-refresh"></ion-refresher>
+				<div ng-include="'templates/on_tabs/trending.html'"></div>
+			<ion-infinite-scroll ng-if="!over" on-infinite="load()" distance="1%"></ion-infinite-scroll>
+			</ion-content>
+		</ion-pane>
+	</ion-tab>
+</ion-tabs>
+</ion-view>

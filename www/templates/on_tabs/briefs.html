@@ -1,0 +1,31 @@
+<div class="row responsive-sm responsive-md responsive-lg" ng-repeat="Item in topnew | limitTo:5 | filter:{categories:17}" >
+	<div class="col no-padding">
+		<a href="#/app/news_daily/{{Item.id}}">
+			<img ng-src="{{Item.mobiconnector_feature_image.source_url}}" class="img" style="display:block">
+		</a>
+	</div>
+	<div class="col no-padding">
+		<div class="row background">
+			<h3><b><a href="#/app/news_daily/{{Item.id}}" class="title-briefs">
+				{{Item.title.rendered}}
+			</a></b></h3>
+		</div>
+		<div class="row background">
+			<p class="briefs" ng-bind-html="$sce.trustAsHtml(Item.excerpt.rendered)"></p>
+		</div>
+	</div>
+	<div class="col no-padding">
+		<div class="row no-padding row-center info-briefs">
+			<div>
+				{{getdate}}
+			</div>
+			<div>
+				<button ng-click="showPopupshare()"class="button button-clear button-stable">
+					<i style="font-size:20px;"class="icon-share"></i>SHARE
+				</button>
+			</div>
+			
+		</div>
+	</div>
+	
+</div>

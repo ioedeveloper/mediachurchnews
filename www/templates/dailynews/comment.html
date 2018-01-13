@@ -1,0 +1,32 @@
+<ion-view>
+<ion-nav-title>
+	<span>{{'Comment' | translate}}</span> <span dir="ltr">({{comments.length}})</span>
+</ion-nav-title>
+<ion-content scroll="false" style="background:#ddd">
+	<div class="absolute width-100 content-login padding-horizontal padding-top">
+		<div class="padding-bottom" ng-show="!isLogin">
+			<input ng-model="data.name" class="width-100 input-comment" type="text" placeholder="{{'name'|translate}}" />
+		</div>
+		<div class="padding-bottom" ng-show="!isLogin">
+			<input ng-model="data.email" class="width-100 input-comment" type="email" placeholder="{{'email'|translate}}" />
+		</div>
+		<div class="padding-bottom">
+			<textarea ng-model="data.content" class="text-comment" placeholder="{{'content'|translate}}"></textarea>
+		</div>
+		<div class="padding-bottom">
+			<button type="submit" class="bar-button button-block login-email box-shadow" style="min-height:40px" ng-click="AddAComment()">{{'addComment' | translate}}</button>
+		</div>
+	</div>
+	<ion-scroll class="comment-content" ng-class="{'guest':!isLogin}">
+		<div class="card show-comment" ng-repeat="item in comments">
+			<div class="item item-avatar comments">
+				<img ng-src="{{item.mobiconnector_local_avatar}}" style="position:absolute;top:0px;left:0px;">
+				<b style="font-size:12px;display:block;line-height:1">{{item.author_name}}</b>
+				<span style="font-size:9px;"class="info-news">{{item.time | timeAgo}}</span>
+			</div>
+			<span class="content-comments" ng-bind-html="$sce.trustAsHtml(item.content.rendered)"></span>
+		</div>
+		<ion-infinite-scroll ng-if="!overComments" on-infinite="load()" distance="1%"></ion-infinite-scroll>
+	</ion-scroll>
+</ion-content>
+</ion-view>

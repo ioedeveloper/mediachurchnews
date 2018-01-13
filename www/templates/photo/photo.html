@@ -1,0 +1,25 @@
+<ion-view title="{{'photos' | translate}}">
+<link href="css/style-photo.css" rel="stylesheet" type="text/css">
+<ion-nav-buttons side="right">
+	<button ui-sref="app.search" class="bar-sidemenu bar-button ion-ios-search-strong"></button>
+</ion-nav-buttons>
+<ion-nav-buttons side="secondary">
+	<button ui-sref="app.settings" class="bar-sidemenu bar-button icon-settings"></button>
+</ion-nav-buttons>
+<ion-content class="content-photo">
+<ion-refresher on-refresh="doRefresh()" spinner="none" pulling-icon="ion-refresh"></ion-refresher>
+<div class="text-center padding" ng-show="refreshing"><ion-spinner></ion-spinner></div>
+	<div class="row" style="flex-wrap:wrap;">
+		<div class="col col-50 photo" ng-repeat="item in photos as count" ui-sref="app.newsPhoto({id:item.id})">
+			<div class="news-photo-img">
+				<img ng-src="{{item.mobiconnector_feature_image.mobiconnector_medium || 'img/no_images.png'}}" class="img">
+			</div>
+			<div class="padding">
+				<a class="title-news"><b ng-bind-html="item.title.rendered"></b></a>
+			</div>
+		</div>
+	</div>	
+<div ng-show="over && count.length <1" class="padding text-center dark">{{'noData' | translate}}</div>
+<ion-infinite-scroll ng-if="!over" on-infinite="load()" distance="1%"></ion-infinite-scroll>
+</ion-content>
+</ion-view>

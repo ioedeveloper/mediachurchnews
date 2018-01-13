@@ -1,0 +1,8 @@
+{
+  "name": "mediachurch",
+  "app_id": "dd0a6a5b",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

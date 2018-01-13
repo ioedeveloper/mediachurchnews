@@ -1,0 +1,21 @@
+.nav-bar-title .item{background:none}
+.nav-bar-title .item input{color:#fff}
+.search-main{
+	background:#ddd;
+	padding-top:5px
+}
+.card{
+	margin:5px;
+	padding:3px;
+	line-height:14px
+}
+.card .item{padding:5px}
+.card .item.title{
+	font-weight:bold;
+	color:#000
+}
+.card .item.content{
+	font-size:14px;
+	color:#818181;
+	padding-bottom:0
+}

@@ -1,0 +1,16 @@
+<ion-view title="{{'resetPassword' | translate}}">
+<link href="css/settings.css" rel="stylesheet" type="text/css" />
+<ion-content class="stable-bg">
+<div class="light-bg padding-top">
+	<div class="padding-horizontal">{{'enterEmail' | translate}}</div>
+	<div class="list padding-horizontal">
+		<label class="item item-input item-floating-label">
+			<input ng-model="data.email" class="input-login" type="email" placeholder="{{'email' | translate}}">
+		</label>
+	</div>
+	<div class="row row-no-padding padding-top">
+		<button ng-click="reset()" ng-disabled="!data.email" class="button login-email col col-60 col-offset-20 upper">{{'resetPassword' | translate}}</button>
+	</div>
+</div>
+</ion-content>
+</ion-view>

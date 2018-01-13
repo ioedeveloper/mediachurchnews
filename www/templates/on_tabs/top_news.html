@@ -1,0 +1,40 @@
+<div class="text-center padding" ng-show="refreshing"><ion-spinner></ion-spinner></div>
+<div class="row posts" ng-repeat="item in topnews as count">
+	<div ng-if="item.format=='standard'" class="col no-padding" ui-sref="app.news({id:item.id})">
+		<div ng-if="$first && item.mobiconnector_feature_image.mobiconnector_large" class="col news-video relative no-padding" ui-sref="app.newsPhoto({id:item.id})">
+			<img ng-src="{{item.mobiconnector_feature_image.mobiconnector_large}}" class="img float-left" />
+			<span class="absolute title-news"><b><span ng-bind-html="item.title.rendered"></span></b></span>
+		</div>
+		<div ng-if="!$first || ($first && !item.mobiconnector_feature_image.mobiconnector_large)" class="row news">
+			<div class="col col-33" ng-if="item.mobiconnector_feature_image.mobiconnector_medium">
+				<img ng-src="{{item.mobiconnector_feature_image.mobiconnector_medium}}" class="img" />
+			</div>
+			<div class="col">
+				<a class="title-news"><b ng-bind-html="item.title.rendered"></b></a>
+				<div ng-if="!item.mobiconnector_feature_image.mobiconnector_large" class="item item-text-wrap no-padding">
+					<span ng-bind-html="item.content.rendered | firstSentence"></span>...
+				</div>
+				<div class="row row-no-padding">
+					<span class="col col-offset-10 info">{{item.time | timeAgo}}</span>
+					<div class="col col-offset-10">
+						<span class="info"><i class="icon-chat"></i> {{item.mobiconnector_total_comments.approved}} 
+						<span ng-if="item.mobiconnector_total_comments.approved <2">{{'comment' || translate}}</span>
+						<span ng-if="item.mobiconnector_total_comments.approved >1">{{'comments' || translate}}</span>
+						</span>
+					</div>
+				</div>		
+			</div>
+		</div>
+	</div>
+	<div ng-if="item.format=='video'" class="col news-video relative no-padding" ui-sref="app.news({id:item.id})">
+		<img ng-src="{{item.mobiconnector_feature_image.mobiconnector_large || 'img/no_images.png'}}" class="img float-left" />
+		<span class="absolute title-news"><b><span ng-bind-html="item.title.rendered"></span></b></span>
+		<i class="absolute icon icon-play"></i>
+	</div>
+	<div ng-if="item.format=='image'" class="col news-video relative no-padding" ui-sref="app.newsPhoto({id:item.id})">
+		<img ng-src="{{item.mobiconnector_feature_image.mobiconnector_large || 'img/no_images.png'}}" class="img float-left" />
+		<span class="absolute title-news"><b><span ng-bind-html="item.title.rendered"></span></b></span>
+		<i class="absolute icon icon-photo"></i>
+	</div>
+</div>
+<div ng-show="over && count.length <1" class="padding text-center dark">{{'noData' | translate}}</div>

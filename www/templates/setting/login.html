@@ -1,0 +1,56 @@
+<ion-view title="{{'logIn' | translate}}">
+<link href="css/settings.css" rel="stylesheet" type="text/css" />
+<ion-content class="content-login">
+<!-- 	<div class="row no-padding" style="padding-left:39px;padding-right:39px">
+		<button class="button button-block facebook-login box-shadow" ng-click="loginFacebook()">
+			<div class="row row-no-padding">
+				<div class="col-10 ion-social-facebook">
+				</div>
+				<div class="col-90">
+					LOGIN WITH <b>FACEBOOK</b>
+				</div>
+			</div>
+		</button>
+	</div>
+	<div class="row no-padding-top" style="padding-left:39px;padding-right:39px">
+		<button class="button button-block google-login box-shadow" ng-click="loginGoogle()">
+			<div class="row row-no-padding">
+				<div class="col-10 ion-social-googleplus-outline">
+				</div>
+				<div class="col-90">
+					LOGIN WITH <b>GOOGLE</b>
+				</div>
+			</div>
+		</button>
+	</div>
+	<center class="add">OR</center>
+ -->	<div class="row">
+		<div class="col">
+			<div class="col background box-shadow no-padding">
+				<div class="list padding">
+					<label class="item item-input item-floating-label">
+						<input ng-model="data.username" class="input-login" type="text" placeholder="{{'username' | translate}}">
+					</label>
+					<label class="item item-input item-floating-label">
+						<input ng-model="data.password" class="input-login" type="password" placeholder="{{'password' | translate}}">
+					</label>
+				</div>
+				<div class="col text-center">
+					<a class="add" ui-sref="app.forgot">{{'forgotPassword' | translate}}</a>
+				</div>
+				<div class="col login no-padding-top">
+					<button class="button button-block login-email box-shadow no-margin upper" ng-disabled="!data.username || !data.password" ng-click="login()">
+						<span>{{'logIn' | translate}}</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col no-padding">
+		<center><a class="add" href="">{{'notMember' | translate}}</a></center>
+	</div>
+	<div class="col no-padding-top">
+		<a href="#/app/settings/login/signup" class="button button-block signup-now">{{'signUpNow' | translate}}</a>
+	</div>
+</ion-content>
+</ion-view>

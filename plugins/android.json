@@ -1,0 +1,64 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.taydo.dailynews"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.taydo.dailynews"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.taydo.dailynews"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.taydo.dailynews"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.taydo.dailynews"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.taydo.dailynews"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.taydo.dailynews"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.taydo.dailynews"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.taydo.dailynews"
+        },
+        "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "com.taydo.dailynews"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.taydo.dailynews"
+        },
+        "onesignal-cordova-plugin": {
+            "PACKAGE_NAME": "com.taydo.dailynews"
+        },
+        "cordova-plugin-google-analytics": {
+            "PACKAGE_NAME": "com.taydo.dailynews"
+        },
+        "cordova-plugin-admob-free": {
+            "PACKAGE_NAME": "com.taydo.dailynews"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.taydo.dailynews"
+        },
+        "cordova-promise-polyfill": {
+            "PACKAGE_NAME": "com.taydo.dailynews"
+        },
+        "cordova-admob-sdk": {
+            "PACKAGE_NAME": "com.taydo.dailynews"
+        }
+    }
+}

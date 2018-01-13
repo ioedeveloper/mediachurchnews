@@ -1,0 +1,39 @@
+{
+  "name": "cordova-admob-sdk",
+  "version": "0.6.0",
+  "description": "Google AdMob SDK to Cordova.",
+  "scripts": {
+    "version": "sync-package-version --cordova-plugin"
+  },
+  "devDependencies": {
+    "sync-package-version": "0.0.3"
+  },
+  "cordova": {
+    "id": "cordova-admob-sdk",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": "rehy/cordova-admob-sdk",
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "ad",
+    "admob",
+    "google",
+    "sdk"
+  ],
+  "author": "Ratson",
+  "license": "MIT",
+  "files": [
+    "*.js",
+    "*.md",
+    "*.xml",
+    "LICENSE",
+    "src",
+    "www"
+  ]
+}

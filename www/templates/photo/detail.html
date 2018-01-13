@@ -1,0 +1,20 @@
+<ion-view title="">
+<link href="css/style-photo.css" rel="stylesheet" type="text/css">
+<ion-nav-buttons side="right">
+	<button ng-click="share()" class="light bar-button ion-android-share-alt"></button>
+</ion-nav-buttons>
+<ion-nav-buttons side="secondary">
+	<button ng-click="bookmark()" class="light bar-button icon-bookmark" ng-class="{'bookmarked':bookmarked}"></button>
+</ion-nav-buttons>
+<ion-content scroll="false" class="detail-main">
+	<ion-slide-box show-pager="false" class="height-100">
+		<ion-slide ng-repeat="item in list track by $index" class="row row-center relative no-padding" on-release="onRelease($event, $index)">
+			<img ng-src="{{item.src}}" class="margin-auto width-100" />
+			<div class="photo-info absolute padding">
+				<p><b>{{item.title}} <span dir="ltr">({{$index+1}}/{{list.length}})</span></b><p>
+				<span>{{item.alt}}</span>
+			</div>
+		</ion-slide>
+	</ion-slide-box>
+</ion-content>
+</ion-view>	

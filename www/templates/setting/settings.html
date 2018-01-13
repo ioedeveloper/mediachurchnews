@@ -1,0 +1,64 @@
+<ion-view title="{{'Settings' | translate}}">
+<link href="css/settings.css" rel="stylesheet" type="text/css" />
+<ion-content>
+	<div class="list">
+		<a ng-if="!login" ui-sref="app.login" class="row row-center item item-avatar no-padding">
+			<img ng-src="img/avatar.png">
+			<span class="text-setting">{{'logIn' | translate}}</span>
+		</a>
+		<div ng-if="login" class="row row-center item item-avatar no-padding relative">
+			<img ng-if="!login.avatar" ng-src="img/avatar.png">
+			<img ng-if="login.avatar" ng-src="{{login.avatar}}">
+			<span class="col col-60 text-setting">{{login.user_display_name}}</span>
+			<button ng-click="editAvatar()" class="button absolute button-icon icon-pen"></button>
+			<button ng-click="showLogout()" class="button logout button-small absolute">
+				{{'logout' | translate}}
+			</button>
+		</div>
+		<a class="item" ui-sref="app.bookmark">
+			<span class="text-setting">{{'myBookmarks' | translate}}</span>
+		</a>
+		<span class="item item-divider title-setting">{{'appSettings' | translate}}</span>
+		<!-- <a ng-click="showPopupTheme()" class="item">
+			<span class="text-setting">Theme</span>
+		</a> -->
+		<a ng-click="showPopupText()" class="item">
+			<span class="text-setting">{{'textSize' | translate}}<br/>
+			<span class="add">{{'textSizeDescription' | translate}}</span></span>
+		</a>
+		<!-- <a href="#/app/settings/notification" class="item">
+			<span class="text-setting">Push notifications</span>
+		</a> -->
+		<li class="item item-toggle">
+			<span class="text-setting">{{'notification' | translate}}</span>
+			<label class="toggle toggle-balanced">
+				<input type="checkbox" ng-model="settings.notification">
+				<div class="track">
+					<div class="handle"></div>
+				</div>
+			</label>
+		</li>
+		<span class="item item-divider title-setting">{{'support' | translate}}</span>
+		<a ng-click="rateApp()" class="item">
+			<span class="text-setting">{{'rateApp' | translate}}</span>
+		</a>
+		<a ng-click="shareApp()" class="item">
+			<span class="text-setting">{{'shareApp' | translate}}</span>
+		</a>
+		<span class="item item-divider title-setting">{{'information' | translate}}</span>
+		<a href="#/app/settings/about" class="item">
+			<span class="text-setting">{{'aboutUs' | translate}}</span>
+		</a>
+		<a href="#/app/settings/terms" class="item">
+			<span class="text-setting">{{'termsOfUse' | translate}}</span>
+		</a>
+		<a href="#/app/settings/policy" class="item">
+			<span class="text-setting">{{'privacyPolicy' | translate}}</span>
+		</a>
+		<a class="item">
+			<span class="text-setting">{{'version' | translate}}</span>
+			<div class="float-right">{{'versionNumber' | translate}}</div>
+		</a>
+	</div>
+</ion-content>
+</ion-view>

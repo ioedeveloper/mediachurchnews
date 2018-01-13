@@ -1,0 +1,95 @@
+@font-face {
+font-family: "vspfonts";
+src: url("vspfonts.ttf") format("truetype");
+font-weight: normal;
+font-style: normal;
+}
+.icon-bag:before,
+.icon-block:before,
+.icon-bookmark:before,
+.icon-brief:before,
+.icon-chart:before,
+.icon-chat:before,
+.icon-check:before,
+.icon-city:before,
+.icon-connect:before,
+.icon-draw:before,
+.icon-home:before,
+.icon-hospital:before,
+.icon-important:before,
+.icon-life:before,
+.icon-location:before,
+.icon-menu:before,
+.icon-mute:before,
+.icon-new-global:before,
+.icon-news:before,
+.icon-pen:before,
+.icon-people:before,
+.icon-person:before,
+.icon-photo:before,
+.icon-play:after,
+.icon-restaurent:before,
+.icon-run:before,
+.icon-science:before,
+.icon-settings:before,
+.icon-sport:before,
+.icon-tivi:before,
+.icon-tower:before,
+.icon-trash:before,
+.icon-travel:before,
+.icon-vibrate:before,
+.icon-video:before,
+.icon-volume:before,
+.icon-vote:before,
+.icon-font:before
+{
+display: inline-block;
+font-family: "vspfonts";
+speak: none;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+text-rendering: auto;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+.icon-bag:before{content: '\e000'}
+.icon-block:before{content: '\e001'}
+.icon-bookmark:before{content: '\e002'}
+.icon-brief:before{content: '\e003'}
+.icon-chart:before{content: '\e004'}
+.icon-chat:before{content: '\e005'}
+.icon-check:before{content: '\e006'}
+.icon-city:before{content: '\e007'}
+.icon-connect:before{content: '\e008'}
+.icon-draw:before{content: '\e009'}
+.icon-home:before{content: '\e00a'}
+.icon-hospital:before{content: '\e00b'}
+.icon-important:before{content: '\e00c'}
+.icon-life:before{content: '\e00d'}
+.icon-location:before{content: '\e00e'}
+.icon-menu:before{content: '\e00f'}
+.icon-mute:before{content: '\e010'}
+.icon-new-global:before{content: '\e011'}
+.icon-news:before{content: '\e012'}
+.icon-pen:before{content: '\e013'}
+.icon-people:before{content: '\e014'}
+.icon-person:before{content: '\e015'}
+.icon-photo:before{content: '\e016'}
+.icon-play:after{content: '\e017'}
+.icon-restaurent:before{content: '\e018'}
+.icon-run:before{content: '\e019'}
+.icon-science:before{content: '\e01a'}
+.icon-settings:before{content: '\e01b'}
+.icon-sport:before{content: '\e01c'}
+.icon-tivi:before{content: '\e01d'}
+.icon-tower:before{content: '\e01e'}
+.icon-trash:before{content: '\e01f'}
+.icon-travel:before{content: '\e020'}
+.icon-vibrate:before{content: '\e021'}
+.icon-video:before{content: '\e022'}
+.icon-volume:before{content: '\e023'}
+.icon-vote:before{content: '\e024'}
+.icon-font:before{content: '\e025'}

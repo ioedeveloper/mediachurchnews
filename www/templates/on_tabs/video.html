@@ -1,0 +1,9 @@
+<div class="text-center padding" ng-show="refreshing"><ion-spinner></ion-spinner></div>
+<div class="row posts" ng-repeat="item in videos | orderBy:time as count">
+	<div class="relative col news-video no-padding" ui-sref="app.news({id:item.id})">
+		<img ng-src="{{item.mobiconnector_feature_image.source_url || 'img/no_images.png'}}" class="img float-left" />
+		<span class="absolute title-news"><b><span ng-bind-html="item.title.rendered"></span></b></span>
+		<i class="absolute icon icon-play"></i>
+	</div>
+</div>
+<div ng-show="over && count.length <1" class="padding text-center dark">{{'noData' | translate}}</div>
